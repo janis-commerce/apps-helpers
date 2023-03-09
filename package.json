@@ -1,0 +1,28 @@
+{
+  "name": "@janiscommerce/apps-helper",
+  "version": "0.0.1",
+  "description": "Helpers for janis apps",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janis-commerce/apps-helper.git"
+  },
+  "keywords": [
+    "janis",
+    "apps",
+    "janiscommerce"
+  ],
+  "author": "Janis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janis-commerce/apps-helper/issues"
+  },
+  "homepage": "https://github.com/janis-commerce/apps-helper#readme"
+}
