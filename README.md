@@ -11,15 +11,13 @@ This package provides utilities for use in Janis apps.
 npm install @janiscommerce/apps-helpers
 ```
 
-## Usage
-<a name="module_isString"></a>
+## Utils
+<a name="isString"></a>
 
-## isString
-<a name="exp_module_isString--isString"></a>
+## isString() ⇒ <code>bool</code>
+<p>If the type of the argument is a string, return true, otherwise return false.</p>
 
-### isString() ⇒ ⏏
-**Kind**: Exported function  
-**Returns**: <p>bool</p>  
+**Kind**: global function  
 
 | Type | Description |
 | --- | --- |

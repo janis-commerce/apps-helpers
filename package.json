@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "export TEST_ENV=true; mocha --exit -R nyan --recursive tests/",
-    "build-docs": "jsdoc2md --template template-readme.hbs --configure ./jsdoc2md.json --files lib/**/*.js > README.md",
+    "build-docs": "jsdoc2md --template template-readme.hbs --configure ./jsdoc2md.json --files lib/*.js > README.md",
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
     "coverage": "nyc npm test",
     "lint": "eslint lib/ tests/",
