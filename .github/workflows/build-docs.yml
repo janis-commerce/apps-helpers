@@ -1,26 +1,24 @@
-name: Build Readme
+# name: Build Readme
 
-on: ["push"]
+# on: ["push"]
 
-jobs:
+# jobs:
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
 
-    - uses: actions/checkout@v3
+#     - uses: actions/checkout@v3
 
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
+#     - name: Use Node.js 14.x
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 14.x
 
-    - name: build readme
-      run: |
-        npm install
-        npm run build-docs
-    - name: auto-commit
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+#     - name: build readme
+#       run: |
+#         npm install
+#         npm run build-docs
+#     - name: auto-commit
+#       uses: stefanzweifel/git-auto-commit-action@v4
