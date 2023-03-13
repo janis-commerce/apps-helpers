@@ -46,7 +46,7 @@ isObject('Janis') // false
 
 | Type | Description |
 | --- | --- |
-| <code>string</code> | <p>The string to validate.</p> |
+| <code>string</code> | <p>String to validate.</p> |
 
 **Example**  
 ```js
