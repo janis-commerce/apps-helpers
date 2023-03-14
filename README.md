@@ -15,7 +15,7 @@ npm install @janiscommerce/apps-helpers
 ## Functions
 
 <dl>
-<dt><a href="#isObject">isObject()</a> ⇒ <code>bool</code></dt>
+<dt><a href="#isObject">isObject(obj)</a> ⇒</dt>
 <dd><p>return true or false if arg is a valid object</p></dd>
 <dt><a href="#isString">isString()</a> ⇒ <code>bool</code></dt>
 <dd><p>If the type of the argument is a string, return true, otherwise return false.</p></dd>
@@ -23,15 +23,20 @@ npm install @janiscommerce/apps-helpers
 
 <a name="isObject"></a>
 
-## isObject() ⇒ <code>bool</code>
+## isObject(obj) ⇒
 <p>return true or false if arg is a valid object</p>
 
 **Kind**: global function  
+**Returns**: <p>bool</p>  
 
-| Type | Description |
+| Param | Type |
 | --- | --- |
-| <code>object</code> | <p>Object to validate</p> |
+| obj | <code>object</code> | 
 
+**Example**  
+```js
+validateObject('test') // false
+```
 **Example**  
 ```js
 import {isObject} from '@janiscommerce/apps-helpers'
