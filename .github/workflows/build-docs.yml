@@ -1,6 +1,8 @@
 name: Build Readme
 
-on: ["push"]
+on:
+  push:
+    tags: [ '*' ]
 
 jobs:
 
