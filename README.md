@@ -17,6 +17,8 @@ npm install @janiscommerce/apps-helpers
 <dl>
 <dt><a href="#isArray">isArray(arr)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid array</p></dd>
+<dt><a href="#isFunction">isFunction(fn)</a> ⇒ <code>bool</code></dt>
+<dd><p>return true or false if arg is a valid function</p></dd>
 <dt><a href="#isObject">isObject(obj)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid object</p></dd>
 <dt><a href="#isString">isString(str)</a> ⇒ <code>bool</code></dt>
@@ -38,6 +40,22 @@ npm install @janiscommerce/apps-helpers
 ```js
 import {isArray} from '@janiscommerce/apps-helpers'
 isArray(['Janis']) // true
+```
+<a name="isFunction"></a>
+
+## isFunction(fn) ⇒ <code>bool</code>
+<p>return true or false if arg is a valid function</p>
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| fn | [<code>isFunction</code>](#isFunction) | 
+
+**Example**  
+```js
+import {isFunction} from '@janiscommerce/apps-helpers'
+isFunction(() => true) // true
 ```
 <a name="isObject"></a>
 
