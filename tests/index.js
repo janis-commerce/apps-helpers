@@ -5,7 +5,7 @@ import isArray from '../lib/isArray.js';
 import helper from '../lib/index.js';
 
 describe('helper functions', () => {
-  it('asdf', () => {
-    assert.deepStrictEqual(helper, { isString, isObject, isArray });
-  });
+	it('asdf', () => {
+		assert.deepStrictEqual(helper, { isString, isObject, isArray });
+	});
 });
