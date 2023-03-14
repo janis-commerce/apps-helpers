@@ -8,7 +8,9 @@
  * isString('Janis') // true
  */
 
-const isString$1 = str => !!(typeof str === 'string');
+var isString$1 = function isString(str) {
+  return !!(typeof str === 'string');
+};
 var isString_1 = isString$1;
 
 /**
@@ -22,14 +24,16 @@ var isString_1 = isString$1;
  * isObject('Janis') // false
  */
 
-const isObject$1 = obj => !!(obj && obj.constructor === Object);
+var isObject$1 = function isObject(obj) {
+  return !!(obj && obj.constructor === Object);
+};
 var isObject_1 = isObject$1;
 
-const isString = isString_1;
-const isObject = isObject_1;
+var isString = isString_1;
+var isObject = isObject_1;
 var lib = {
-  isString,
-  isObject
+  isString: isString,
+  isObject: isObject
 };
 
 export { lib as default };

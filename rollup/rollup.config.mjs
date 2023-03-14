@@ -10,11 +10,6 @@ export default [
         format: 'es',
         sourcemap: true,
       },
-      {
-        file: 'dist/index.js',
-        format: 'cjs',
-        sourcemap: true,
-      },
     ],
     plugins: [...plugins()],
   },
