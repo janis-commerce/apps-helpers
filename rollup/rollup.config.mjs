@@ -6,8 +6,9 @@ export default [
     input: 'lib/index.js',
     output: [
       {
-        file: 'dist/index.mjs',
-        format: 'es',
+        name: 'main',
+        file: 'dist/index.umd.js',
+        format: 'umd',
         sourcemap: true,
       },
     ],
