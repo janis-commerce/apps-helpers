@@ -1,5 +1,5 @@
-const assert = require('assert');
-const isString = require('../lib/isString');
+import { strict as assert } from 'assert';
+import isString from '../lib/isString.js';
 
 describe('isString helper', () => {
   it('return false when argument is not a string', () => {

@@ -1,5 +1,5 @@
-const assert = require('assert');
-const isObject = require('../lib/isObject');
+import { strict as assert } from 'assert';
+import isObject from '../lib/isObject.js';
 
 describe('isObject helper', () => {
   it('return false when argument is not a object', () => {

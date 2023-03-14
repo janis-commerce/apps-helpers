@@ -6,7 +6,7 @@
 
   /**
    * @function isString
-   * @param {string} - The string to validate.
+   * @param {string} str - String to validate.
    * @description If the type of the argument is a string, return true, otherwise return false.
    * @returns {bool}
    * @example
@@ -14,35 +14,43 @@
    * isString('Janis') // true
    */
 
-  var isString$1 = function isString(str) {
+  var isString = function isString(str) {
     return !!(typeof str === 'string');
   };
-  var isString_1 = isString$1;
 
   /**
    * @function isObject
    * @param {object} obj
    * @description return true or false if arg is a valid object
-   * @example validateObject('test') // false
-   * @returns bool
+   * @returns {bool}
    * @example
    * import {isObject} from '@janiscommerce/apps-helpers'
    * isObject('Janis') // false
    */
-
-  var isObject$1 = function isObject(obj) {
+  var isObject = function isObject(obj) {
     return !!(obj && obj.constructor === Object);
   };
-  var isObject_1 = isObject$1;
 
-  var isString = isString_1;
-  var isObject = isObject_1;
-  var lib = {
-    isString: isString,
-    isObject: isObject
+  /**
+   * @function isArray
+   * @param {array} arr
+   * @description return true or false if arg is a valid array
+   * @returns {bool}
+   * @example
+   * import {isArray} from '@janiscommerce/apps-helpers'
+   * isArray(['Janis']) // true
+   */
+  var isArray = function isArray(arr) {
+    return !!(arr instanceof Array);
   };
 
-  return lib;
+  var index = {
+    isString: isString,
+    isObject: isObject,
+    isArray: isArray
+  };
+
+  return index;
 
 }));
 //# sourceMappingURL=index.umd.js.map

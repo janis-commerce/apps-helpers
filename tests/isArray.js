@@ -1,5 +1,5 @@
-const assert = require('assert');
-const isArray = require('../lib/isArray');
+import { strict as assert } from 'assert';
+import isArray from '../lib/isArray.js';
 
 describe('isArray helper', () => {
   it('return false when argument is not a object', () => {

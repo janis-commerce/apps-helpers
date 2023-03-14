@@ -1,8 +1,8 @@
-const assert = require('assert');
-const isString = require('../lib/isString');
-const isObject = require('../lib/isObject');
-const isArray = require('../lib/isArray');
-const helper = require('../lib');
+import assert from 'assert';
+import isString from '../lib/isString.js';
+import isObject from '../lib/isObject.js';
+import isArray from '../lib/isArray.js';
+import helper from '../lib/index.js';
 
 describe('helper functions', () => {
   it('asdf', () => {

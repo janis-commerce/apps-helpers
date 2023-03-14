@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     mocha: true,
   },
+  parser: '@babel/eslint-parser',
   extends: 'airbnb-base',
   overrides: [
   ],
@@ -12,5 +13,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/extensions': ['error', 'ignorePackages', { '': 'never' }],
   },
 };
