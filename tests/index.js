@@ -5,6 +5,8 @@ import isArray from '../lib/isArray.js';
 import isFunction from '../lib/isFunction.js';
 import isNumber from '../lib/isNumber.js';
 import isBoolean from '../lib/isBoolean.js';
+import promiseWrapper from '../lib/promiseWrapper.js';
+import isRequired from '../lib/isRequired.js';
 
 import helper from '../lib/index.js';
 
@@ -16,7 +18,9 @@ describe('helper functions', () => {
 			isArray,
 			isFunction,
 			isNumber,
-			isBoolean
+			isBoolean,
+			promiseWrapper,
+			isRequired
 		});
 	});
 });

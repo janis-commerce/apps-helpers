@@ -17,12 +17,16 @@ npm install @janiscommerce/apps-helpers
 <dl>
 <dt><a href="#isArray">isArray(arr)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid array</p></dd>
+<dt><a href="#isBoolean">isBoolean(fn)</a> ⇒ <code>bool</code></dt>
+<dd><p>return true or false if arg is a valid boolean</p></dd>
 <dt><a href="#isFunction">isFunction(fn)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid function</p></dd>
 <dt><a href="#isObject">isObject(obj)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid object</p></dd>
 <dt><a href="#isString">isString(str)</a> ⇒ <code>bool</code></dt>
 <dd><p>If the type of the argument is a string, return true, otherwise return false.</p></dd>
+<dt><a href="#test">test(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
+<dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
 
 <a name="isArray"></a>
@@ -41,6 +45,22 @@ npm install @janiscommerce/apps-helpers
 import {isArray} from '@janiscommerce/apps-helpers'
 isArray(['Janis']) // true
 ```
+<a name="isBoolean"></a>
+
+## isBoolean(fn) ⇒ <code>bool</code>
+<p>return true or false if arg is a valid boolean</p>
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| fn | <code>boolean</code> | 
+
+**Example**  
+```js
+import {isBoolean} from '@janiscommerce/apps-helpers'
+isBoolean((true) // true
+```
 <a name="isFunction"></a>
 
 ## isFunction(fn) ⇒ <code>bool</code>
@@ -50,7 +70,7 @@ isArray(['Janis']) // true
 
 | Param | Type |
 | --- | --- |
-| fn | [<code>isFunction</code>](#isFunction) | 
+| fn | <code>function</code> | 
 
 **Example**  
 ```js
@@ -88,4 +108,20 @@ isObject('Janis') // false
 ```js
 import {isString} from '@janiscommerce/apps-helpers'
 isString('Janis') // true
+```
+<a name="test"></a>
+
+## test(fn) ⇒ <code>array.&lt;data, error&gt;</code>
+<p>wrapper to execute promise and return tuple with data and error</p>
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| fn | <code>function</code> | 
+
+**Example**  
+```js
+import {promiseWrapper} from '@janiscommerce/apps-helpers'
+const [data, error] = await promiseWrapper(promise())
 ```
