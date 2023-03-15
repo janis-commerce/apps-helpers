@@ -9,7 +9,8 @@
 	"plugins": ["@babel", "prettier"],
 	"overrides": [],
 	"parserOptions": {
-		"sourceType": "module"
+		"sourceType": "module",
+		"requireConfigFile": false
 	},
 	"rules": {
 		"prettier/prettier": "error",
