@@ -23,9 +23,11 @@ npm install @janiscommerce/apps-helpers
 <dd><p>return true or false if arg is a valid function</p></dd>
 <dt><a href="#isObject">isObject(obj)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid object</p></dd>
+<dt><a href="#isRequired">isRequired(param)</a> ⇒ <code>Error</code></dt>
+<dd><p>throw error with required param</p></dd>
 <dt><a href="#isString">isString(str)</a> ⇒ <code>bool</code></dt>
 <dd><p>If the type of the argument is a string, return true, otherwise return false.</p></dd>
-<dt><a href="#test">test(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
+<dt><a href="#promiseWrapper">promiseWrapper(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
 
@@ -93,6 +95,26 @@ isFunction(() => true) // true
 import {isObject} from '@janiscommerce/apps-helpers'
 isObject('Janis') // false
 ```
+<a name="isRequired"></a>
+
+## isRequired(param) ⇒ <code>Error</code>
+<p>throw error with required param</p>
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| param | <code>string</code> | <p>name of the param that is required</p> |
+
+**Example**  
+```js
+import {isRequired} from '@janiscommerce/apps-helpers'
+const promise = async (arg = isRequired('arg')) => {
+	return arg
+}
+
+promise() // Error: 'arg is required'
+```
 <a name="isString"></a>
 
 ## isString(str) ⇒ <code>bool</code>
@@ -109,9 +131,9 @@ isObject('Janis') // false
 import {isString} from '@janiscommerce/apps-helpers'
 isString('Janis') // true
 ```
-<a name="test"></a>
+<a name="promiseWrapper"></a>
 
-## test(fn) ⇒ <code>array.&lt;data, error&gt;</code>
+## promiseWrapper(fn) ⇒ <code>array.&lt;data, error&gt;</code>
 <p>wrapper to execute promise and return tuple with data and error</p>
 
 **Kind**: global function  
