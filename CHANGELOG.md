@@ -2,6 +2,14 @@
 
 [Unreleased]
 
+### 1.0.1 - 2023-03-16
+
+## Fixed
+
+- Fixed @babel/core dependency
+
+### 1.0.0 - 2023-03-16
+
 ## Added
 
 - Added Rollup config
@@ -12,3 +20,4 @@
 - Added isArray helper
 - Added isFunction helper
 - Added isNumber helper
+- Added promiseWrapper helper
