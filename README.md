@@ -7,14 +7,18 @@
 This package provides utilities for use in Janis apps.
 
 ## 📦 Installation
+
 ```sh
 npm install @janiscommerce/apps-helpers
 ```
 
 ## Utils
+
 ## Functions
 
 <dl>
+<dt><a href="#isValidUrl">isValidUrl</a> ⇒ <code>boolean</code></dt>
+<dd><p>return true if the argument is a valid url</p></dd>
 <dt><a href="#isArray">isArray(arr)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid array</p></dd>
 <dt><a href="#isBoolean">isBoolean(fn)</a> ⇒ <code>bool</code></dt>
@@ -31,119 +35,170 @@ npm install @janiscommerce/apps-helpers
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
 
+<a name="isValidUrl"></a>
+
+## isValidUrl ⇒ <code>boolean</code>
+
+<p>return true if the argument is a valid url</p>
+
+**Kind**: global variable  
+**Returns**: <code>boolean</code> - <p>true or false</p>
+
+| Param | Type                |
+| ----- | ------------------- |
+| str   | <code>string</code> |
+
+**Example**
+
+```js
+isValidUrl('www.valid-url.com'); // true
+```
+
+**Example**
+
+```js
+isValidUrl('invalid-url.com'); // false
+```
+
+**Example**
+
+```js
+isValidUrl(); // false
+```
+
 <a name="isArray"></a>
 
 ## isArray(arr) ⇒ <code>bool</code>
+
 <p>return true or false if arg is a valid array</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type |
-| --- | --- |
-| arr | <code>array</code> | 
+| Param | Type               |
+| ----- | ------------------ |
+| arr   | <code>array</code> |
 
-**Example**  
+**Example**
+
 ```js
-import {isArray} from '@janiscommerce/apps-helpers'
-isArray(['Janis']) // true
+import { isArray } from '@janiscommerce/apps-helpers';
+isArray(['Janis']); // true
 ```
+
 <a name="isBoolean"></a>
 
 ## isBoolean(fn) ⇒ <code>bool</code>
+
 <p>return true or false if arg is a valid boolean</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type |
-| --- | --- |
-| fn | <code>boolean</code> | 
+| Param | Type                 |
+| ----- | -------------------- |
+| fn    | <code>boolean</code> |
 
-**Example**  
+**Example**
+
 ```js
 import {isBoolean} from '@janiscommerce/apps-helpers'
 isBoolean((true) // true
 ```
+
 <a name="isFunction"></a>
 
 ## isFunction(fn) ⇒ <code>bool</code>
+
 <p>return true or false if arg is a valid function</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type |
-| --- | --- |
-| fn | <code>function</code> | 
+| Param | Type                  |
+| ----- | --------------------- |
+| fn    | <code>function</code> |
 
-**Example**  
+**Example**
+
 ```js
-import {isFunction} from '@janiscommerce/apps-helpers'
-isFunction(() => true) // true
+import { isFunction } from '@janiscommerce/apps-helpers';
+isFunction(() => true); // true
 ```
+
 <a name="isObject"></a>
 
 ## isObject(obj) ⇒ <code>bool</code>
+
 <p>return true or false if arg is a valid object</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type |
-| --- | --- |
-| obj | <code>object</code> | 
+| Param | Type                |
+| ----- | ------------------- |
+| obj   | <code>object</code> |
 
-**Example**  
+**Example**
+
 ```js
-import {isObject} from '@janiscommerce/apps-helpers'
-isObject('Janis') // false
+import { isObject } from '@janiscommerce/apps-helpers';
+isObject('Janis'); // false
 ```
+
 <a name="isRequired"></a>
 
 ## isRequired(param) ⇒ <code>Error</code>
+
 <p>throw error with required param</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
 | param | <code>string</code> | <p>name of the param that is required</p> |
 
-**Example**  
-```js
-import {isRequired} from '@janiscommerce/apps-helpers'
-const promise = async (arg = isRequired('arg')) => {
-	return arg
-}
+**Example**
 
-promise() // Error: 'arg is required'
+```js
+import { isRequired } from '@janiscommerce/apps-helpers';
+const promise = async (arg = isRequired('arg')) => {
+	return arg;
+};
+
+promise(); // Error: 'arg is required'
 ```
+
 <a name="isString"></a>
 
 ## isString(str) ⇒ <code>bool</code>
+
 <p>If the type of the argument is a string, return true, otherwise return false.</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type | Description |
-| --- | --- | --- |
-| str | <code>string</code> | <p>String to validate.</p> |
+| Param | Type                | Description                |
+| ----- | ------------------- | -------------------------- |
+| str   | <code>string</code> | <p>String to validate.</p> |
 
-**Example**  
+**Example**
+
 ```js
-import {isString} from '@janiscommerce/apps-helpers'
-isString('Janis') // true
+import { isString } from '@janiscommerce/apps-helpers';
+isString('Janis'); // true
 ```
+
 <a name="promiseWrapper"></a>
 
 ## promiseWrapper(fn) ⇒ <code>array.&lt;data, error&gt;</code>
+
 <p>wrapper to execute promise and return tuple with data and error</p>
 
-**Kind**: global function  
+**Kind**: global function
 
-| Param | Type |
-| --- | --- |
-| fn | <code>function</code> | 
+| Param | Type                  |
+| ----- | --------------------- |
+| fn    | <code>function</code> |
 
-**Example**  
+**Example**
+
 ```js
-import {promiseWrapper} from '@janiscommerce/apps-helpers'
-const [data, error] = await promiseWrapper(promise())
+import { promiseWrapper } from '@janiscommerce/apps-helpers';
+const [data, error] = await promiseWrapper(promise());
 ```
