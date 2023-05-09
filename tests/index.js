@@ -7,6 +7,7 @@ import isNumber from '../lib/isNumber.js';
 import isBoolean from '../lib/isBoolean.js';
 import promiseWrapper from '../lib/promiseWrapper.js';
 import isRequired from '../lib/isRequired.js';
+import isValidUrl from '../lib/isValidUrl.js';
 
 import helper from '../lib/index.js';
 
@@ -20,7 +21,8 @@ describe('helper functions', () => {
 			isNumber,
 			isBoolean,
 			promiseWrapper,
-			isRequired
+			isRequired,
+			isValidUrl
 		});
 	});
 });

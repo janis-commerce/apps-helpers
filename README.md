@@ -27,6 +27,8 @@ npm install @janiscommerce/apps-helpers
 <dd><p>throw error with required param</p></dd>
 <dt><a href="#isString">isString(str)</a> ⇒ <code>bool</code></dt>
 <dd><p>If the type of the argument is a string, return true, otherwise return false.</p></dd>
+<dt><a href="#isValidUrl">isValidUrl(str)</a> ⇒ <code>boolean</code></dt>
+<dd><p>return true if the argument is a valid url</p></dd>
 <dt><a href="#promiseWrapper">promiseWrapper(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
@@ -130,6 +132,30 @@ promise() // Error: 'arg is required'
 ```js
 import {isString} from '@janiscommerce/apps-helpers'
 isString('Janis') // true
+```
+<a name="isValidUrl"></a>
+
+## isValidUrl(str) ⇒ <code>boolean</code>
+<p>return true if the argument is a valid url</p>
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - <p>true or false</p>  
+
+| Param | Type |
+| --- | --- |
+| str | <code>string</code> | 
+
+**Example**  
+```js
+isValidUrl('www.valid-url.com') // true
+```
+**Example**  
+```js
+isValidUrl('invalid-url.com') // false
+```
+**Example**  
+```js
+isValidUrl() // false
 ```
 <a name="promiseWrapper"></a>
 
