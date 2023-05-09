@@ -2,6 +2,12 @@
 
 [Unreleased]
 
+### 1.1.0 - 2023-05-09
+
+### Added
+
+- Added isValidUrl
+
 ### 1.0.1 - 2023-03-16
 
 ## Fixed
