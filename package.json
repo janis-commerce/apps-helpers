@@ -1,6 +1,6 @@
 {
 	"name": "@janiscommerce/apps-helpers",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Helpers for janis apps",
 	"main": "dist/index.umd.js",
 	"type": "module",
