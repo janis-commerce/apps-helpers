@@ -5,6 +5,7 @@
 ### Added
 
 - Added util debounce
+- Added ts to create types
 
 ### 1.1.0 - 2023-05-09
 
