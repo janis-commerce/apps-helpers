@@ -31,6 +31,8 @@ npm install @janiscommerce/apps-helpers
 <dd><p>return true if the argument is a valid url</p></dd>
 <dt><a href="#promiseWrapper">promiseWrapper(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
+<dt><a href="#debounce">debounce(fn, wait = 300)</a> ⇒ <code>fn</code></dt>
+<dd><p>creates and returns a debounced version of the provided fn function.</p></dd>
 </dl>
 
 <a name="isArray"></a>
@@ -172,4 +174,33 @@ isValidUrl() // false
 ```js
 import {promiseWrapper} from '@janiscommerce/apps-helpers'
 const [data, error] = await promiseWrapper(promise())
+```
+<a name="debounce"></a>
+
+## debounce(fn, wait) ⇒ <code>fn</code>
+
+<p>Creates and returns a debounced version of the provided fn function. This can be useful in scenarios where you want to limit the frequency of function calls, such as handling user input or event-based interactions.</p>
+
+**Kind**: global function
+
+| Param | Type                  | Default		| Description	|	
+| ----- | --------------------- | ---------------------	| -------------	|
+| fn    | <code>function</code>	|			| function to be debounced |		
+| wait  | <code>number</code>   | <code>300</code>	| milliseconds	|
+
+**Example**
+```js
+import {debounce} from '@janiscommerce/apps-helpers'
+// Create a debounced function that will be called after 300ms
+const debouncedFunc = debounce(() => {
+  console.log('Debounced function called!');
+}, 300);
+
+// Call the debounced function multiple times
+debouncedFunc(); // Will not execute immediately
+debouncedFunc(); // Will not execute immediately
+debouncedFunc(); // Will not execute immediately
+
+// After 300ms of inactivity, the debounced function will be invoked
+// Output: "Debounced function called!"
 ```
