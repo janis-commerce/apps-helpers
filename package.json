@@ -15,6 +15,7 @@
 		"build": "rm -rf dist && rollup -c rollup/rollup.config.mjs",
 		"coverage": "nyc npm test",
 		"lint": "eslint lib/ tests/",
+		"build-types": "tsc lib/index.js --declaration --allowJs --emitDeclarationOnly --outDir types",
 		"prepare": "husky install"
 	},
 	"repository": {
@@ -22,8 +23,10 @@
 		"url": "git+https://github.com/janis-commerce/apps-helper.git"
 	},
 	"files": [
-		"dist/"
+		"dist/",
+		"types/"
 	],
+	"types": "types/index.d.ts",
 	"keywords": [
 		"janis",
 		"apps",
@@ -61,6 +64,7 @@
 		"mocha": "^10.2.0",
 		"prettier": "^2.8.4",
 		"rollup": "^3.4.0",
-		"sinon": "^15.0.1"
+		"sinon": "^15.0.1",
+		"typescript": "^5.0.4"
 	}
 }
