@@ -2,6 +2,8 @@
 
 [Unreleased]
 
+## 1.2.2 - 2023-05-19
+
 ### Fixed
 
 - Fixed build docs steps on release tag
