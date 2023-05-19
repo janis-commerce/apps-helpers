@@ -2,21 +2,39 @@
 
 [Unreleased]
 
-### 1.1.0 - 2023-05-09
+### Fixed
+
+- Fixed build docs steps on release tag
+- Fixed debounce export in index.js
+
+## 1.2.1 - 2023-05-16
+
+### Fixed
+
+- Fixed command build types in action
+
+## 1.2.0 - 2023-05-16
+
+### Added
+
+- Added util debounce
+- Added ts to create types
+
+## 1.1.0 - 2023-05-09
 
 ### Added
 
 - Added isValidUrl
 
-### 1.0.1 - 2023-03-16
+## 1.0.1 - 2023-03-16
 
-## Fixed
+### Fixed
 
 - Fixed @babel/core dependency
 
-### 1.0.0 - 2023-03-16
+## 1.0.0 - 2023-03-16
 
-## Added
+### Added
 
 - Added Rollup config
 - Added test setup
