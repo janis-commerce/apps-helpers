@@ -8,6 +8,7 @@ import isBoolean from '../lib/isBoolean.js';
 import promiseWrapper from '../lib/promiseWrapper.js';
 import isRequired from '../lib/isRequired.js';
 import isValidUrl from '../lib/isValidUrl.js';
+import debounce from '../lib/debounce.js';
 
 import helper from '../lib/index.js';
 
@@ -22,7 +23,8 @@ describe('helper functions', () => {
 			isBoolean,
 			promiseWrapper,
 			isRequired,
-			isValidUrl
+			isValidUrl,
+			debounce
 		});
 	});
 });
