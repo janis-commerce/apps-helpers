@@ -8,7 +8,7 @@ describe('isJSON helper', () => {
 		);
 	});
 
-	it('return true when argument is a function', () => {
+	it('return true when param is a valid object JSON', () => {
 		['{"key": "value"}', '{}'].forEach((param) => assert.equal(isJSON(param), true));
 	});
 });
