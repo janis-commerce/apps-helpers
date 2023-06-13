@@ -2,6 +2,12 @@
 
 [Unreleased]
 
+## 1.3.0 - 2023-06-13
+
+### Added
+
+- Added helper generateRandomId
+
 ## 1.2.2 - 2023-05-19
 
 ### Fixed
