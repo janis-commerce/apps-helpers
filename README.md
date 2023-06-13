@@ -204,3 +204,22 @@ debouncedFunc(); // Will not execute immediately
 // After 300ms of inactivity, the debounced function will be invoked
 // Output: "Debounced function called!"
 ```
+<a name="isJSON"></a>
+
+## isJSON(param) ⇒ <code>bool</code>
+<p>If the type of the argument is a valid JSON object, return true, otherwise return false.</p>
+
+**Kind**: global function  
+
+| Param | Type | 
+| --- | --- |
+| str | <code>string</code> |
+
+**Example**  
+```js
+import {isJSON} from '@janiscommerce/apps-helpers'
+
+isJSON('{"key": "value"}') // true
+
+isJSON('random string') // false
+```
