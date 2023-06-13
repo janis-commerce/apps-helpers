@@ -15,6 +15,12 @@ npm install @janiscommerce/apps-helpers
 ## Functions
 
 <dl>
+<dt><a href="#debounce">debounce(fn, [wait])</a> ⇒</dt>
+<dd><p>The function debounce is a function that takes two arguments, a function and a number. The function
+debounce returns a function that will execute the function passed to it after the number of
+milliseconds passed to it</p></dd>
+<dt><a href="#generateRandomId">generateRandomId()</a> ⇒ <code>string</code></dt>
+<dd><p>returns a random combination of letters and/or numbers</p></dd>
 <dt><a href="#isArray">isArray(arr)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid array</p></dd>
 <dt><a href="#isBoolean">isBoolean(fn)</a> ⇒ <code>bool</code></dt>
@@ -31,10 +37,34 @@ npm install @janiscommerce/apps-helpers
 <dd><p>return true if the argument is a valid url</p></dd>
 <dt><a href="#promiseWrapper">promiseWrapper(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
-<dt><a href="#debounce">debounce(fn, wait = 300)</a> ⇒ <code>fn</code></dt>
-<dd><p>creates and returns a debounced version of the provided fn function.</p></dd>
 </dl>
 
+<a name="debounce"></a>
+
+## debounce(fn, [wait]) ⇒
+<p>The function debounce is a function that takes two arguments, a function and a number. The function
+debounce returns a function that will execute the function passed to it after the number of
+milliseconds passed to it</p>
+
+**Kind**: global function  
+**Returns**: <p>A function that will be called after the specified wait time.</p>  
+
+| Param | Default | Description |
+| --- | --- | --- |
+| fn |  | <p>The function to be debounced.</p> |
+| [wait] | <code>300</code> | <p>The number of milliseconds to wait before executing the function.</p> |
+
+<a name="generateRandomId"></a>
+
+## generateRandomId() ⇒ <code>string</code>
+<p>returns a random combination of letters and/or numbers</p>
+
+**Kind**: global function  
+**Example**  
+```js
+import {generateRandomId} from '@janiscommerce/apps-helpers'
+generateRandomId() // '6kj4nk9c5so'
+```
 <a name="isArray"></a>
 
 ## isArray(arr) ⇒ <code>bool</code>
@@ -174,33 +204,4 @@ isValidUrl() // false
 ```js
 import {promiseWrapper} from '@janiscommerce/apps-helpers'
 const [data, error] = await promiseWrapper(promise())
-```
-<a name="debounce"></a>
-
-## debounce(fn, wait) ⇒ <code>fn</code>
-
-<p>Creates and returns a debounced version of the provided fn function. This can be useful in scenarios where you want to limit the frequency of function calls, such as handling user input or event-based interactions.</p>
-
-**Kind**: global function
-
-| Param | Type                  | Default		| Description	|	
-| ----- | --------------------- | ---------------------	| -------------	|
-| fn    | <code>function</code>	|			| function to be debounced |		
-| wait  | <code>number</code>   | <code>300</code>	| milliseconds	|
-
-**Example**
-```js
-import {debounce} from '@janiscommerce/apps-helpers'
-// Create a debounced function that will be called after 300ms
-const debouncedFunc = debounce(() => {
-  console.log('Debounced function called!');
-}, 300);
-
-// Call the debounced function multiple times
-debouncedFunc(); // Will not execute immediately
-debouncedFunc(); // Will not execute immediately
-debouncedFunc(); // Will not execute immediately
-
-// After 300ms of inactivity, the debounced function will be invoked
-// Output: "Debounced function called!"
 ```
