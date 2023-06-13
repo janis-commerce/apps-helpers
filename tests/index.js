@@ -9,6 +9,7 @@ import promiseWrapper from '../lib/promiseWrapper.js';
 import isRequired from '../lib/isRequired.js';
 import isValidUrl from '../lib/isValidUrl.js';
 import debounce from '../lib/debounce.js';
+import isJSON from '../lib/isJSON.js';
 
 import helper from '../lib/index.js';
 
@@ -24,7 +25,8 @@ describe('helper functions', () => {
 			promiseWrapper,
 			isRequired,
 			isValidUrl,
-			debounce
+			debounce,
+			isJSON
 		});
 	});
 });
