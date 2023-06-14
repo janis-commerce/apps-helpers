@@ -1,6 +1,6 @@
 'use strict';
 // eslint-disable-next-line import/no-unresolved
-import { name, version } from '/package.json';
+const pkg = require('package.json');
 
 import fs from 'fs';
 import path from 'path';
@@ -8,8 +8,8 @@ import util from 'util';
 import https from 'https';
 
 const url = process.env.RELEASE_SLACK_WEBHOOK_URL;
-const serviceCode = name;
-const releaseVersion = process.env.GITHUB_REF_NAME || version;
+const serviceCode = pkg.name;
+const releaseVersion = process.env.GITHUB_REF_NAME || pkg.version;
 const repoBaseDir = '.';
 
 const prettifyServiceCode = (code) => {
