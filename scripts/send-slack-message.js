@@ -1,5 +1,6 @@
 'use strict';
-import { name, version } from '../package.json';
+// eslint-disable-next-line import/extensions
+import { name, version } from '../package';
 
 import fs from 'fs';
 import path from 'path';
