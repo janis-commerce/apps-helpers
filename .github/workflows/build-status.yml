@@ -23,7 +23,6 @@ jobs:
     - run: npm test
 
   send-slack-message:
-      needs: publish-npm
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
