@@ -110,3 +110,6 @@ About
 
 ## build folder
 dist
+
+## Release_notes for slack message
+RELEASE_NOTES.md
