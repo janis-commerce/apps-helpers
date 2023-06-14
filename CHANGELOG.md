@@ -2,6 +2,10 @@
 
 [Unreleased]
 
+## [1.5.0] - 2023-06-14
+
+- Added notification message in slack channel
+
 ## [1.4.0] - 2023-06-14
 
 ### Added
