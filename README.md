@@ -35,6 +35,9 @@ milliseconds passed to it</p></dd>
 <dd><p>throw error with required param</p></dd>
 <dt><a href="#isString">isString(str)</a> ⇒ <code>bool</code></dt>
 <dd><p>If the type of the argument is a string, return true, otherwise return false.</p></dd>
+<dt><a href="#isValidFormatPosition">isValidFormatPosition(position)</a> ⇒ <code>boolean</code></dt>
+<dd><p>If the position has the valid format required it will return true, otherwise return false.
+For a position to be valid, you need a positionKey: string | number or a positionId: string</p></dd>
 <dt><a href="#isValidUrl">isValidUrl(str)</a> ⇒ <code>boolean</code></dt>
 <dd><p>return true if the argument is a valid url</p></dd>
 <dt><a href="#promiseWrapper">promiseWrapper(fn)</a> ⇒ <code>array.&lt;data, error&gt;</code></dt>
@@ -182,6 +185,27 @@ promise() // Error: 'arg is required'
 ```js
 import {isString} from '@janiscommerce/apps-helpers'
 isString('Janis') // true
+```
+<a name="isValidFormatPosition"></a>
+
+## isValidFormatPosition(position) ⇒ <code>boolean</code>
+<p>If the position has the valid format required it will return true, otherwise return false.
+For a position to be valid, you need a positionKey: string | number or a positionId: string</p>
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| position | <code>object</code> | <p>position object</p> |
+
+**Example**  
+```js
+import {isValidFormatPosition} from '@janiscommerce/apps-helpers'
+isValidFormatPosition({positionKey: '001-D-01-1', positionId: '632b40c90adf68f197caa91f'}) // true
+isValidFormatPosition({positionKey: '001-D-01-1'}) // true
+isValidFormatPosition({positionKey: 123}) // true
+isValidFormatPosition({positionId: '632b40c90adf68f197caa91f'}) // true
+isValidFormatPosition({}) // false
 ```
 <a name="isValidUrl"></a>
 

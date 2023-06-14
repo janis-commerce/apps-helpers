@@ -11,6 +11,7 @@ import isValidUrl from '../lib/isValidUrl.js';
 import debounce from '../lib/debounce.js';
 import generateRandomId from '../lib/generateRandomId.js';
 import isJSON from '../lib/isJSON.js';
+import isValidFormatPosition from '../lib/isValidFormatPosition.js';
 
 import helper from '../lib/index.js';
 
@@ -28,7 +29,8 @@ describe('helper functions', () => {
 			isValidUrl,
 			debounce,
 			generateRandomId,
-			isJSON
+			isJSON,
+			isValidFormatPosition
 		});
 	});
 });
