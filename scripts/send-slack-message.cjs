@@ -18,7 +18,7 @@ const releaseNotes = fs
 	.replace(/### ([a-z]+)/gi, '*$1*')
 	.replace(/\*{2}/g, '*');
 
-const header = `${serviceCode} v${releaseVersion} released! :tada:`;
+const header = `${serviceCode} ${releaseVersion} released! :tada:`;
 
 (async () => {
 	const asyncRequest = util.promisify((requestData, cb) => {
