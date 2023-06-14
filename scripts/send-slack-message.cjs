@@ -13,22 +13,12 @@ const serviceCode = pkg.name;
 const releaseVersion = process.env.GITHUB_REF_NAME;
 const repoBaseDir = '.';
 
-const prettifyServiceCode = (code) => {
-	if (code.length === 3) return code.toUpperCase();
-
-	return code
-		.toLowerCase()
-		.split('-')
-		.map((part) => `${part[0].toUpperCase()}${part.substr(1)}`)
-		.join(' ');
-};
-
 const releaseNotes = fs
 	.readFileSync(path.resolve(repoBaseDir, './RELEASE_NOTES.md'), 'utf8')
 	.replace(/### ([a-z]+)/gi, '*$1*')
 	.replace(/\*{2}/g, '*');
 
-const header = `${prettifyServiceCode(serviceCode)} v${releaseVersion} released! :tada:`;
+const header = `${serviceCode} v${releaseVersion} released! :tada:`;
 
 (async () => {
 	const asyncRequest = util.promisify((requestData, cb) => {
