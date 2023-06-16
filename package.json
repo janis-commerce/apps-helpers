@@ -1,6 +1,6 @@
 {
 	"name": "@janiscommerce/apps-helpers",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"description": "Helpers for janis apps",
 	"main": "dist/index.umd.js",
 	"type": "module",
@@ -58,13 +58,17 @@
 		"eslint-plugin-n": "^15.6.1",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-promise": "^6.1.1",
+		"fs": "^0.0.1-security",
+		"https": "^1.0.0",
 		"husky": "^8.0.0",
 		"jsdoc-babel": "^0.5.0",
 		"jsdoc-to-markdown": "^8.0.0",
 		"mocha": "^10.2.0",
+		"path": "^0.12.7",
 		"prettier": "^2.8.4",
 		"rollup": "^3.4.0",
 		"sinon": "^15.0.1",
-		"typescript": "^5.0.4"
+		"typescript": "^5.0.4",
+		"util": "^0.12.5"
 	}
 }
