@@ -2,11 +2,17 @@
 
 [Unreleased]
 
+## [1.6.2] - 2023-06-21
+
+### Fixed
+
+- Fixed version variable for notification message from env variable
+
 ## [1.6.1] - 2023-06-21
 
 ### Fixed
 
-- Added isValidFormatPosition helper
+- Fixed version variable for notification message
 
 ## [1.6.0] - 2023-06-21
 
