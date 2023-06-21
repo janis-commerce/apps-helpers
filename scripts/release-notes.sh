@@ -1,4 +1,4 @@
-awk -v ver="1.4.0" '
+awk -v ver="$GITHUB_REF_NAME" '
 	/^#+ \[/ { if (p) { exit }; if ($2 == "["ver"]") { p=1; next} } p
 	' CHANGELOG.md | sed '${/^[[:space:]]*$/d;}' > RELEASE_NOTES.md
 

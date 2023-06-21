@@ -2,11 +2,21 @@
 
 [Unreleased]
 
+## [1.6.1] - 2023-06-21
+
+### Fixed
+
+- Added isValidFormatPosition helper
+
 ## [1.6.0] - 2023-06-21
+
+### Added
 
 - Added isValidFormatPosition helper
 
 ## [1.5.0] - 2023-06-14
+
+### Added
 
 - Added notification message in slack channel
 
