@@ -31,3 +31,4 @@ jobs:
         - run: bash ./scripts/release-notes.sh
           env:
             RELEASE_SLACK_WEBHOOK_URL: ${{secrets.RELEASE_SLACK_WEBHOOK_URL}}
+            GITHUB_REF_NAME: ${{GITHUB_REF_NAME}}
