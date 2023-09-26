@@ -2,6 +2,10 @@
 
 [Unreleased]
 
+### Added
+
+- Added getHeaders function
+
 ## [1.6.2] - 2023-06-21
 
 ### Fixed
