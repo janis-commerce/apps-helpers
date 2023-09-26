@@ -21,6 +21,8 @@ debounce returns a function that will execute the function passed to it after th
 milliseconds passed to it</p></dd>
 <dt><a href="#generateRandomId">generateRandomId()</a> ⇒ <code>string</code></dt>
 <dd><p>returns a random combination of letters and/or numbers</p></dd>
+<dt><a href="#getHeaders">getHeaders([params], [deviceDataHeaders], [customHeaders])</a> ⇒ <code>object</code></dt>
+<dd><p>get correct headers for janis api</p></dd>
 <dt><a href="#isArray">isArray(arr)</a> ⇒ <code>bool</code></dt>
 <dd><p>return true or false if arg is a valid array</p></dd>
 <dt><a href="#isBoolean">isBoolean(fn)</a> ⇒ <code>bool</code></dt>
@@ -69,6 +71,60 @@ milliseconds passed to it</p>
 ```js
 import {generateRandomId} from '@janiscommerce/apps-helpers'
 generateRandomId() // '6kj4nk9c5so'
+```
+<a name="getHeaders"></a>
+
+## getHeaders([params], [deviceDataHeaders], [customHeaders]) ⇒ <code>object</code>
+<p>get correct headers for janis api</p>
+
+**Kind**: global function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [params] | <code>object</code> | <code>{}</code> | <p>object with params</p> |
+| [deviceDataHeaders] | <code>object</code> | <code>{}</code> | <p>headers with the device info</p> |
+| [customHeaders] | <code>object</code> | <code>{}</code> | <p>extra custom headers</p> |
+| params.client | <code>string</code> |  | <p>client name for janis api</p> |
+| params.accessToken | <code>string</code> |  | <p>access token for janis api</p> |
+| params.page | <code>number</code> |  | <p>number of page</p> |
+| params.pageSize | <code>number</code> |  | <p>quantity per page</p> |
+| params.getTotals | <code>boolean</code> |  | <p>request api totals</p> |
+| params.getOnlyTotals | <code>boolean</code> |  | <p>request api totals without body response</p> |
+
+**Example**  
+```js
+const params = {
+  client: 'my-client',
+  accessToken: 'my-access-token',
+  page: 1,
+  pageSize: 10,
+  getTotals: true,
+  getOnlyTotals: false
+};
+const deviceDataHeaders = {
+  'janis-app-name': 'MyApp',
+  'janis-app-version': '1.0.0',
+  'janis-app-device-os-name': 'iOS',
+  'janis-app-device-os-version': '14.5',
+  'janis-app-device-name': 'iPhone 12',
+  'janis-app-device-id': '123456789'
+};
+const customHeaders = {
+  'custom-header': 'custom-value'
+};
+const headers = getHeaders(params, deviceDataHeaders, customHeaders);
+// {
+//   'content-Type': 'application/json',
+//   'janis-api-key': 'Bearer',
+//   'janis-client': 'my-client',
+//   'janis-api-secret': 'my-access-token',
+//   'x-janis-page': 1,
+//   'x-janis-page-size': 10,
+//   'x-janis-totals': true,
+//   'x-janis-only-totals': false,
+//   'user-agent': 'MyApp/1.0.0 (iOS 14.5; iPhone 12; 123456789)',
+//   'custom-header': 'custom-value'
+// }
 ```
 <a name="isArray"></a>
 
@@ -205,8 +261,8 @@ For a position to be valid, you need a positionKey: string or a positionId: stri
 import {isValidFormatPosition} from '@janiscommerce/apps-helpers'
 isValidFormatPosition({positionKey: '001-D-01-1', positionId: '632b40c90adf68f197caa91f'}) // true
 isValidFormatPosition({positionKey: '001-D-01-1'}) // true
-isValidFormatPosition({positionKey: '123'}) // true
 isValidFormatPosition({positionId: '632b40c90adf68f197caa91f'}) // true
+isValidFormatPosition({positionKey: 123}) // false
 isValidFormatPosition({}) // false
 ```
 <a name="isValidUrl"></a>

@@ -12,6 +12,7 @@ import debounce from '../lib/debounce.js';
 import generateRandomId from '../lib/generateRandomId.js';
 import isJSON from '../lib/isJSON.js';
 import isValidFormatPosition from '../lib/isValidFormatPosition.js';
+import getHeaders from '../lib/getHeaders.js';
 
 import helper from '../lib/index.js';
 
@@ -30,7 +31,8 @@ describe('helper functions', () => {
 			debounce,
 			generateRandomId,
 			isJSON,
-			isValidFormatPosition
+			isValidFormatPosition,
+			getHeaders
 		});
 	});
 });
