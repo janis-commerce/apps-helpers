@@ -2,6 +2,8 @@
 
 [Unreleased]
 
+## [1.7.0] - 2023-10-12
+
 ### Added
 
 - Added getHeaders function
