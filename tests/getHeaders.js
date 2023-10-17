@@ -111,6 +111,21 @@ describe('getHeaders helper', () => {
 			assert.deepEqual(getHeaders(params, {}, {}), expectedHeaders);
 		});
 
+		it('should not send user-agent when all headers are empty', () => {
+			const deviceDataHeaders = {
+				'janis-app-name': '',
+				'janis-app-version': '',
+				'janis-app-package-name': '',
+				'janis-app-build': '',
+				'janis-app-device-os-name': '',
+				'janis-app-device-os-version': '',
+				'janis-app-device-name': '',
+				'janis-app-device-id': ''
+			};
+			const headers = getHeaders({}, deviceDataHeaders);
+			assert.equal(headers['user-agent'], undefined);
+		});
+
 		it('should include user-agent header with valid deviceDataHeaders', () => {
 			const deviceDataHeaders = {
 				'janis-app-name': 'MyApp',
