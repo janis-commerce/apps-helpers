@@ -82,7 +82,8 @@ describe('getHeaders helper', () => {
 			};
 			const customHeaders = {
 				'custom-header-1': 'value-1',
-				'custom-header-2': 'value-2'
+				'custom-header-2': 'value-2',
+				'invalid-header': ''
 			};
 			const expectedHeaders = {
 				...baseHeaders,
@@ -154,11 +155,20 @@ describe('getHeaders helper', () => {
 				// 'janis-app-device-id': '123456789'
 			};
 
+			const expectedHeaders = {
+				...baseHeaders,
+				'user-agent':
+					'janis.beta.app/1.0.0 (MyApp; 1) iOS/14.5 (unknown janis-app-device-id; unknown janis-app-device-name)',
+				'janis-app-name': 'MyApp',
+				'janis-app-version': '1.0.0',
+				'janis-app-package-name': 'janis.beta.app',
+				'janis-app-build': '1',
+				'janis-app-device-os-name': 'iOS',
+				'janis-app-device-os-version': '14.5'
+			};
+
 			const headers = getHeaders({}, deviceDataHeaders);
-			assert.equal(
-				headers['user-agent'],
-				'janis.beta.app/1.0.0 (MyApp; 1) iOS/14.5 (unknown janis-app-device-id; unknown janis-app-device-name)'
-			);
+			assert.deepEqual(headers, expectedHeaders);
 		});
 
 		it('should not include user-agent header when all keys are missing or are invlid', () => {
