@@ -82,7 +82,8 @@ describe('getHeaders helper', () => {
 			};
 			const customHeaders = {
 				'custom-header-1': 'value-1',
-				'custom-header-2': 'value-2'
+				'custom-header-2': 'value-2',
+				'invalid-header': ''
 			};
 			const expectedHeaders = {
 				...baseHeaders,
@@ -111,6 +112,21 @@ describe('getHeaders helper', () => {
 			assert.deepEqual(getHeaders(params, {}, {}), expectedHeaders);
 		});
 
+		it('should not send user-agent when all headers are empty', () => {
+			const deviceDataHeaders = {
+				'janis-app-name': '',
+				'janis-app-version': '',
+				'janis-app-package-name': '',
+				'janis-app-build': '',
+				'janis-app-device-os-name': '',
+				'janis-app-device-os-version': '',
+				'janis-app-device-name': '',
+				'janis-app-device-id': ''
+			};
+			const headers = getHeaders({}, deviceDataHeaders);
+			assert.equal(headers['user-agent'], undefined);
+		});
+
 		it('should include user-agent header with valid deviceDataHeaders', () => {
 			const deviceDataHeaders = {
 				'janis-app-name': 'MyApp',
@@ -135,15 +151,24 @@ describe('getHeaders helper', () => {
 				'janis-app-build': '1',
 				'janis-app-device-os-name': 'iOS',
 				'janis-app-device-os-version': '14.5',
-				'janis-app-device-name': 'iPhone 12'
+				'janis-app-device-name': ''
 				// 'janis-app-device-id': '123456789'
 			};
 
+			const expectedHeaders = {
+				...baseHeaders,
+				'user-agent':
+					'janis.beta.app/1.0.0 (MyApp; 1) iOS/14.5 (unknown janis-app-device-id; unknown janis-app-device-name)',
+				'janis-app-name': 'MyApp',
+				'janis-app-version': '1.0.0',
+				'janis-app-package-name': 'janis.beta.app',
+				'janis-app-build': '1',
+				'janis-app-device-os-name': 'iOS',
+				'janis-app-device-os-version': '14.5'
+			};
+
 			const headers = getHeaders({}, deviceDataHeaders);
-			assert.equal(
-				headers['user-agent'],
-				'janis.beta.app/1.0.0 (MyApp; 1) iOS/14.5 (unknown janis-app-device-id; iPhone 12)'
-			);
+			assert.deepEqual(headers, expectedHeaders);
 		});
 
 		it('should not include user-agent header when all keys are missing or are invlid', () => {
