@@ -2,15 +2,17 @@
 
 [Unreleased]
 
+## [1.7.1] - 2023-10-18
+
+### Fixed
+
+- Fixed a bug with getHeaders function when empty deviceDataHeaders are passed
+
 ## [1.7.0] - 2023-10-12
 
 ### Added
 
 - Added getHeaders function
-
-### Fixed
-
-- Fixed a bug with getHeaders function when empty deviceDataHeaders are passed
 
 ## [1.6.2] - 2023-06-21
 
