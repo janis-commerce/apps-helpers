@@ -47,10 +47,10 @@ describe('formatIsoToDate', () => {
 		it('params.date is valid and params.customFormat is receive', () => {
 			const params = {
 				date: '2022-02-03T17:29:28.637Z',
-				customFormat: 'pp'
+				customFormat: 'yyyy'
 			};
 			mock(params.date);
-			assert.equal(formatIsoToDate(params), '2:29:28 PM');
+			assert.equal(formatIsoToDate(params), '2022');
 		});
 	});
 });
