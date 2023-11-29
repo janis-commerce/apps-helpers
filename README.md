@@ -12,6 +12,13 @@ npm install @janiscommerce/apps-helpers
 ```
 
 ## Utils
+## Members
+
+<dl>
+<dt><a href="#isValidateIsoString">isValidateIsoString</a> ⇒ <code>boolean</code></dt>
+<dd><p>validate if a ISO string is valid or not</p></dd>
+</dl>
+
 ## Functions
 
 <dl>
@@ -19,6 +26,8 @@ npm install @janiscommerce/apps-helpers
 <dd><p>The function debounce is a function that takes two arguments, a function and a number. The function
 debounce returns a function that will execute the function passed to it after the number of
 milliseconds passed to it</p></dd>
+<dt><a href="#formatIsoToDate">formatIsoToDate(params)</a> ⇒ <code>string</code></dt>
+<dd><p>it is a function that receives an ISO string and formats it</p></dd>
 <dt><a href="#generateRandomId">generateRandomId()</a> ⇒ <code>string</code></dt>
 <dd><p>returns a random combination of letters and/or numbers</p></dd>
 <dt><a href="#getHeaders">getHeaders([params], [deviceDataHeaders], [customHeaders])</a> ⇒ <code>object</code></dt>
@@ -46,6 +55,18 @@ For a position to be valid, you need a positionKey: string or a positionId: stri
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
 
+<a name="isValidateIsoString"></a>
+
+## isValidateIsoString ⇒ <code>boolean</code>
+<p>validate if a ISO string is valid or not</p>
+
+**Kind**: global variable  
+**Returns**: <code>boolean</code> - <p>returns true if the date passed as an argument is valid</p>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| date | <code>Date</code> | <p>date in ISO format</p> |
+
 <a name="debounce"></a>
 
 ## debounce(fn, [wait]) ⇒
@@ -60,6 +81,23 @@ milliseconds passed to it</p>
 | --- | --- | --- |
 | fn |  | <p>The function to be debounced.</p> |
 | [wait] | <code>300</code> | <p>The number of milliseconds to wait before executing the function.</p> |
+
+<a name="formatIsoToDate"></a>
+
+## formatIsoToDate(params) ⇒ <code>string</code>
+<p>it is a function that receives an ISO string and formats it</p>
+
+**Kind**: global function  
+**Returns**: <code>string</code> - <ul>
+<li>returns an formated date. Example: 18/05/23</li>
+</ul>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>param</p> |
+| params.date | <code>Date</code> | <p>iso format. Example: '2022-02-03T17:29:28.637Z'</p> |
+| params.locale | <code>String</code> | <p>iso format. Example: 'es-Ar'</p> |
+| params.customFormat | <code>String</code> | <p>iso format. Example: 'pp'</p> |
 
 <a name="generateRandomId"></a>
 
