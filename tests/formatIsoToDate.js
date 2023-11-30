@@ -15,18 +15,18 @@ describe('formatIsoToDate', () => {
 			const params = { date: '' };
 			assert.deepEqual(formatIsoToDate(params), '');
 		});
+	});
 
+	describe('it returns an valid format date when', () => {
 		it('params.customFormat is not a valid format', () => {
 			const params = {
 				date: '2022-02-03T17:29:28.637Z',
 				customFormat: { data: 'invalidFormat' }
 			};
 			mock(params.date);
-			assert.deepEqual(formatIsoToDate(params), '');
+			assert.deepEqual(formatIsoToDate(params), '03/02/2022');
 		});
-	});
 
-	describe('it returns an valid format date when', () => {
 		it('params.date is valid iso string', () => {
 			const params = {
 				date: '2022-02-03T17:29:28.637Z'
