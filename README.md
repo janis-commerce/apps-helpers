@@ -15,7 +15,7 @@ npm install @janiscommerce/apps-helpers
 ## Members
 
 <dl>
-<dt><a href="#isValidateIsoString">isValidateIsoString</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isValidIsoString">isValidIsoString</a> ⇒ <code>boolean</code></dt>
 <dd><p>validate if a ISO string is valid or not</p></dd>
 </dl>
 
@@ -55,9 +55,9 @@ For a position to be valid, you need a positionKey: string or a positionId: stri
 <dd><p>wrapper to execute promise and return tuple with data and error</p></dd>
 </dl>
 
-<a name="isValidateIsoString"></a>
+<a name="isValidIsoString"></a>
 
-## isValidateIsoString ⇒ <code>boolean</code>
+## isValidIsoString ⇒ <code>boolean</code>
 <p>validate if a ISO string is valid or not</p>
 
 **Kind**: global variable  
