@@ -13,7 +13,7 @@ import generateRandomId from '../lib/generateRandomId.js';
 import isJSON from '../lib/isJSON.js';
 import isValidFormatPosition from '../lib/isValidFormatPosition.js';
 import getHeaders from '../lib/getHeaders.js';
-import isValidateIsoString from '../lib/isValidateIsoString.js';
+import isValidIsoString from '../lib/isValidIsoString.js';
 import formatIsoToDate from '../lib/formatIsoToDate.js';
 
 import helper from '../lib/index.js';
@@ -35,7 +35,7 @@ describe('helper functions', () => {
 			isJSON,
 			isValidFormatPosition,
 			getHeaders,
-			isValidateIsoString,
+			isValidIsoString,
 			formatIsoToDate
 		});
 	});
