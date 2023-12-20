@@ -2,6 +2,12 @@
 
 [Unreleased]
 
+## [1.8.0] - 2023-12-21
+
+### Added
+
+- Added formatIsoToDate function
+
 ## [1.7.1] - 2023-10-18
 
 ### Fixed
