@@ -15,8 +15,8 @@ import isValidFormatPosition from '../lib/isValidFormatPosition.js';
 import getHeaders from '../lib/getHeaders.js';
 import isValidIsoString from '../lib/isValidIsoString.js';
 import formatIsoToDate from '../lib/formatIsoToDate.js';
-
 import helper from '../lib/index.js';
+import isEqualObj from '../lib/isEqualObj.js';
 
 describe('helper functions', () => {
 	it('return methods', () => {
@@ -36,7 +36,8 @@ describe('helper functions', () => {
 			isValidFormatPosition,
 			getHeaders,
 			isValidIsoString,
-			formatIsoToDate
+			formatIsoToDate,
+			isEqualObj
 		});
 	});
 });
