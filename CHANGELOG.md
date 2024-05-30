@@ -2,6 +2,12 @@
 
 [Unreleased]
 
+## [1.9.0] - 2024-05-30
+
+### Added
+
+- Added isEqualObj function
+
 ## [1.8.0] - 2023-12-21
 
 ### Added
