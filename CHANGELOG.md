@@ -2,6 +2,13 @@
 
 [Unreleased]
 
+## [2.0.0] - 2025-01-30
+
+### Removed
+
+- formatIsoToDate function
+- date-fns package
+
 ## [1.9.0] - 2024-05-30
 
 ### Added
