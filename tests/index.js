@@ -14,7 +14,6 @@ import isJSON from '../lib/isJSON.js';
 import isValidFormatPosition from '../lib/isValidFormatPosition.js';
 import getHeaders from '../lib/getHeaders.js';
 import isValidIsoString from '../lib/isValidIsoString.js';
-import formatIsoToDate from '../lib/formatIsoToDate.js';
 import helper from '../lib/index.js';
 import isEqualObj from '../lib/isEqualObj.js';
 import isEmptyArray from '../lib/isEmptyArray.js';
@@ -38,7 +37,6 @@ describe('helper functions', () => {
 			isValidFormatPosition,
 			getHeaders,
 			isValidIsoString,
-			formatIsoToDate,
 			isEqualObj,
 			isEmptyArray,
 			isEmptyObject
