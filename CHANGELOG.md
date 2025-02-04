@@ -2,6 +2,12 @@
 
 [Unreleased]
 
+## [2.1.0] - 2025-02-04
+
+### Added
+
+- isEmptyArray and isEmptyObject functions
+
 ## [2.0.0] - 2025-01-30
 
 ### Removed
