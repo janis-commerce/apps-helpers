@@ -17,6 +17,8 @@ import isValidIsoString from '../lib/isValidIsoString.js';
 import formatIsoToDate from '../lib/formatIsoToDate.js';
 import helper from '../lib/index.js';
 import isEqualObj from '../lib/isEqualObj.js';
+import isEmptyArray from '../lib/isEmptyArray.js';
+import isEmptyObject from '../lib/isEmptyObject.js';
 
 describe('helper functions', () => {
 	it('return methods', () => {
@@ -37,7 +39,9 @@ describe('helper functions', () => {
 			getHeaders,
 			isValidIsoString,
 			formatIsoToDate,
-			isEqualObj
+			isEqualObj,
+			isEmptyArray,
+			isEmptyObject
 		});
 	});
 });
