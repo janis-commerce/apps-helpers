@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@colomfernando 
-janis-commerce
-/
-picking-helpers
-Private
-Cannot fork because forking is disabled.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-picking-helpers/.gitignore
-@gastonpereyra
-gastonpereyra Added Basic files
-Latest commit 5dda55e on Sep 30, 2022
- History
- 1 contributor
-63 lines (46 sloc)  939 Bytes
-
 # Logs
 logs
 *.log
@@ -93,20 +64,6 @@ types/
 
 # next.js build output
 .next
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 
 ## build folder
 dist
@@ -114,6 +71,7 @@ dist
 ## Release_notes for slack message
 RELEASE_NOTES.md
 
+## AI tools
 /.cursor
 /.claude
 /.mcp.json
