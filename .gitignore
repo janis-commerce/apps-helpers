@@ -113,3 +113,7 @@ dist
 
 ## Release_notes for slack message
 RELEASE_NOTES.md
+
+/.cursor
+/.claude
+/.mcp.json
