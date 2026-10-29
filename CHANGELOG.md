@@ -2,6 +2,16 @@
 
 [Unreleased]
 
+## [2.3.0] - 2026-10-29
+
+### Fixed
+
+- Editor auto-import now suggests each helper from the package root (`import { promiseWrapper } from '@janiscommerce/apps-helpers'`) instead of the internal `types/` path, so helpers no longer have to be re-imported by hand
+
+### Changed
+
+- Type declarations now expose each helper as a named export and no longer declare a default export: `import helpers from '@janiscommerce/apps-helpers'` keeps working at runtime, but type-checked projects should switch to named imports
+
 ## [2.2.0] - 2026-03-08
 
 ### Changed
