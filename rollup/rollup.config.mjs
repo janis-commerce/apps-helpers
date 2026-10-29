@@ -9,7 +9,9 @@ export default [
 				name: 'main',
 				file: 'dist/index.umd.js',
 				format: 'umd',
-				sourcemap: true
+				sourcemap: true,
+				// Without __esModule, Babel interop exposes the whole exports object as default, keeping `import helpers from` working in consumers
+				esModule: false
 			}
 		],
 		plugins: [...plugins()]
