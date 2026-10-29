@@ -2,6 +2,18 @@
 
 [Unreleased]
 
+## [2.2.0] - 2026-03-08
+
+### Changed
+
+- Enabled public npm package publishing (`--access public`)
+- Updated all CI/CD workflows to Node.js 18.x and latest action versions
+- Replaced `npm install` / `npm i` with `npm ci` across all workflows
+- Added npm cache to all workflow steps for faster CI runs
+- Fixed branch matching pattern in build-status workflow to support nested branches (`**`)
+- Removed unnecessary matrix strategy from build-status workflow
+- Cleaned up `.gitignore` (removed junk content, removed `package-lock.json` from ignore, added AI tools entries)
+
 ## [2.1.0] - 2025-02-04
 
 ### Added

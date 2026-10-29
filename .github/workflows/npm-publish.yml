@@ -2,43 +2,46 @@ name: NPM Publish
 
 on:
   push:
-    tags: [ '*' ]
+    tags: ['*']
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 14
-      - run: npm i
+          node-version: 18.x
+          cache: 'npm'
+      - run: npm ci
       - run: npm test
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 18.x
+          cache: 'npm'
           registry-url: https://registry.npmjs.org/
-      - run: npm i
+      - run: npm ci
       - run: npm run build
       - run: npm run build-types
-      - run: npm publish --access private
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   send-slack-message:
-      needs: publish-npm
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 14
-        - run: bash ./scripts/release-notes.sh
-          env:
-            RELEASE_SLACK_WEBHOOK_URL: ${{secrets.RELEASE_SLACK_WEBHOOK_URL}}
+    needs: publish-npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'npm'
+      - run: bash ./scripts/release-notes.sh
+        env:
+          RELEASE_SLACK_WEBHOOK_URL: ${{secrets.RELEASE_SLACK_WEBHOOK_URL}}
